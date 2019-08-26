@@ -236,7 +236,7 @@ stage('----------- Publish build info -------------') {
      sh "docker rmi $registryName/$moduleName"
     }
    }
-
+    /*
      Removing all untagged images
      */
     sh "docker rmi \$(docker images | awk '/<none>/ {print \$3}') || true"
